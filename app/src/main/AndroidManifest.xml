@@ -92,7 +92,7 @@
             android:exported="false" />
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="app.alarm.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
