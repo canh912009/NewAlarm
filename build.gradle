@@ -1,21 +1,23 @@
 buildscript {
-    
-    repositories {
+	ext.kotlin_version = '1.3.72'
+
+	repositories {
         maven { url 'https://maven.google.com' }
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-    }
+        classpath 'com.android.tools.build:gradle:3.2.0'
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
 }
 
 project.ext {
     archLifecycleVersion = '1.1.1'
     roomDatabaseVersion = '1.0.0'
     roomRxJavaVersion = '1.0.0'
-    appSupportVersion = '27.1.1'
+    appSupportVersion = '28.0.0-rc01'
     glideVersion = '4.6.1'
     rxAndroidVersion = '2.0.1'
 }
