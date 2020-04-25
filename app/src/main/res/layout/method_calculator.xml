@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ln_method_calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="@dimen/alarm_calculator_layout_min_height"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/alarm_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/alarm_calculator_text_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/icon_ripple_circle_item_size"
+            android:layout_marginEnd="@dimen/icon_ripple_circle_item_size"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_calculator_result"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="\???"
+                android:textColor="@color/alarm_calculator_result_text_color"
+                android:textSize="@dimen/alarm_calculator_result_text_size" />
+
+            <TextView
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/alarm_detail_list_item_text_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--caculator-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/alarm_calculator_background"
+        android:minHeight="@dimen/alarm_calculator_min_height"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <!--hang 1-->
+        <LinearLayout style="@style/RowCalculatorLayoutStyle">
+
+            <TextView
+                android:id="@+id/num7"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_seven" />
+
+            <TextView
+                android:id="@+id/num8"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_eight" />
+
+            <TextView
+                android:id="@+id/num9"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_nine" />
+        </LinearLayout>
+
+        <!--hang 2-->
+        <LinearLayout style="@style/RowCalculatorLayoutStyle">
+
+            <TextView
+                android:id="@+id/num4"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_four" />
+
+            <TextView
+                android:id="@+id/num5"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_five" />
+
+            <TextView
+                android:id="@+id/num6"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_six" />
+        </LinearLayout>
+
+        <!--hang 3-->
+        <LinearLayout style="@style/RowCalculatorLayoutStyle">
+
+            <TextView
+                android:id="@+id/num1"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_one" />
+
+            <TextView
+                android:id="@+id/num2"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_two" />
+
+            <TextView
+                android:id="@+id/num3"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_three" />
+        </LinearLayout>
+
+        <!--hang 4-->
+        <LinearLayout style="@style/RowCalculatorLayoutStyle">
+
+            <TextView
+                android:id="@+id/num0"
+                style="@style/ButtonNumCalculatorLayoutStyle"
+                android:text="@string/num_zero" />
+
+            <LinearLayout
+                android:id="@+id/numX"
+                style="@style/ButtonNumCalculatorLayoutStyle">
+
+                <ImageView
+                    android:layout_width="@dimen/alarm_calculator_icon_tick_delete_size"
+                    android:layout_height="@dimen/alarm_calculator_icon_tick_delete_size"
+                    android:src="@drawable/ic_delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/numV"
+                style="@style/ButtonNumCalculatorLayoutStyle">
+
+                <ImageView
+                    android:layout_width="@dimen/alarm_calculator_icon_tick_delete_size"
+                    android:layout_height="@dimen/alarm_calculator_icon_tick_delete_size"
+                    android:src="@drawable/ic_tick"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

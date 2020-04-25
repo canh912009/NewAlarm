@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:titleMarginEnd="0dp"
+            app:titleMarginStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/alarm_ab_left_button"
+                    android:layout_width="@dimen/alarm_ab_icon_layout_size"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/ripple_effect_btn">
+
+                    <ImageView
+                        android:id="@+id/alarm_ab_left_button_img"
+                        android:layout_width="@dimen/alarm_ab_icon_common_size"
+                        android:layout_height="@dimen/alarm_ab_icon_common_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/colorIconCommon" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/alarm_ab_tittle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/alarm_tittle_alarm_detail"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorTextTitle" />
+
+                <FrameLayout
+                    android:id="@+id/alarm_ab_right_button"
+                    android:layout_width="@dimen/alarm_ab_icon_layout_size"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/ripple_effect_btn"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/alarm_ab_right_button_img"
+                        android:layout_width="@dimen/alarm_ab_icon_common_size"
+                        android:layout_height="@dimen/alarm_ab_icon_common_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_tick"
+                        android:tint="@color/colorIconCommon" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/my_toolbar" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,33 @@
+buildscript {
+    
+    repositories {
+        maven { url 'https://maven.google.com' }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+project.ext {
+    archLifecycleVersion = '1.1.1'
+    roomDatabaseVersion = '1.0.0'
+    roomRxJavaVersion = '1.0.0'
+    appSupportVersion = '27.1.1'
+    glideVersion = '4.6.1'
+    rxAndroidVersion = '2.0.1'
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.google.com' }
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

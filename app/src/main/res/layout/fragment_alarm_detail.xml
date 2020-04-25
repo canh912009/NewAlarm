@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.alarm.ui.detail.AlarmDetailActivity">
+
+    <TimePicker
+        android:id="@+id/alarm_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TimePickerTheme"
+        android:timePickerMode="spinner" />
+
+    <include layout="@layout/item_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/alarm_type_layout"
+                style="@style/AlarmDetailListItemLayout"
+                android:minHeight="@dimen/alarm_detail_list_item_layout_min_height_secondary">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alarm_off_method"
+                        android:textColor="@color/alarm_detail_list_item_text_color"
+                        android:textSize="@dimen/alarm_detail_list_item_text_size" />
+
+                    <TextView
+                        android:id="@+id/alarm_type_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alarm_type_default"
+                        android:textColor="@color/alarm_detail_list_item_text_secondary_color"
+                        android:textSize="@dimen/alarm_detail_list_item_text_secondary_size" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/alarm_type_image"
+                    style="@style/AlarmDetailIconMore"
+                    android:layout_width="@dimen/alarm_detail_icon_type_alarm_size"
+                    android:layout_height="@dimen/alarm_detail_icon_type_alarm_size"
+                    app:srcCompat="@drawable/ic_alarm" />
+
+                <ImageView style="@style/AlarmDetailIconMore" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line" />
+
+            <LinearLayout
+                android:id="@+id/alarm_repeat_layout"
+                style="@style/AlarmDetailListItemLayout">
+
+                <TextView
+                    style="@style/AlarmDetailListItemText"
+                    android:text="@string/alarm_text_repeat" />
+
+                <TextView
+                    android:id="@+id/alarm_repeat_text"
+                    style="@style/AlarmDetailListItemTextValue" />
+
+                <ImageView style="@style/AlarmDetailIconMore" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line" />
+
+            <LinearLayout
+                android:id="@+id/alarm_tone_layout"
+                style="@style/AlarmDetailListItemLayout">
+
+                <TextView
+                    style="@style/AlarmDetailListItemText"
+                    android:text="@string/alarm_text_alarm_tone" />
+
+                <TextView
+                    android:id="@+id/alarm_tone_name"
+                    style="@style/AlarmDetailListItemTextValue" />
+
+                <ImageView style="@style/AlarmDetailIconMore" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line" />
+
+            <LinearLayout
+                android:id="@+id/alarm_snooze_layout"
+                style="@style/AlarmDetailListItemLayout">
+
+                <TextView
+                    style="@style/AlarmDetailListItemText"
+                    android:text="@string/alarm_snooze" />
+
+                <TextView
+                    android:id="@+id/alarm_snooze"
+                    style="@style/AlarmDetailListItemTextValue" />
+
+                <ImageView style="@style/AlarmDetailIconMore" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line" />
+
+            <LinearLayout
+                android:id="@+id/alarm_name_layout"
+                style="@style/AlarmDetailListItemLayout">
+
+                <TextView
+                    style="@style/AlarmDetailListItemText"
+                    android:text="@string/alarm_name" />
+
+                <TextView
+                    android:id="@+id/alarm_name"
+                    style="@style/AlarmDetailListItemTextValue" />
+
+                <ImageView style="@style/AlarmDetailIconMore" />
+
+            </LinearLayout>
+
+            <include layout="@layout/item_line" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

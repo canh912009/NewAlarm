@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="@dimen/list_fragment_close_button"
+        android:height="@dimen/list_fragment_close_button" />
+    <solid android:color="@color/white" />
+</shape>

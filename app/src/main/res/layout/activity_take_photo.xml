@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.type.TakePhotoActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_no_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/image_add_button"
+            android:layout_width="@dimen/alarm_icon_take_photo_size"
+            android:layout_height="@dimen/alarm_icon_take_photo_size"
+            app:srcCompat="@drawable/ic_image_add_button"
+            android:tint="@color/colorIconAddImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/alarm_text_no_photo" />
+
+    </LinearLayout>
+
+    <app.alarm.ui.widget.AutoFitRecyclerView
+        android:id="@+id/list_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="@dimen/alarm_recycle_view_column_width" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_photo_camera"
+        android:tint="@color/colorIconCommon"
+        app:backgroundTint="@color/colorPurple" />
+
+</android.support.design.widget.CoordinatorLayout>

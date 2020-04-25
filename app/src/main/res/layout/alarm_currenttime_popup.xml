@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_alarm_alert_current_time_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|bottom">
+
+            <TextView
+                android:id="@+id/popup_alarm_alert_current_time_ampm_kor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginEnd="6dp"
+                android:gravity="top"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/alarm_popup_am_pm_text_size"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/popup_alarm_alert_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/alarm_popup_current_time_text_size"/>
+
+            <TextView
+                android:id="@+id/popup_alarm_alert_current_time_ampm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginStart="6dp"
+                android:gravity="bottom"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/alarm_popup_am_pm_text_size"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

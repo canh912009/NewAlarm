@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_common"
+    tools:context=".ui.detail.type.ShakePhoneSettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background_common"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alarm_padding_horizontal_common"
+            android:layout_marginStart="@dimen/alarm_padding_horizontal_common"
+            android:layout_marginTop="@dimen/alarm_padding_vertical_common"
+            android:background="@drawable/alarm_type_layout_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/alarm_math_shake_layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/alarm_type_math_shake_icon"
+                    android:layout_height="@dimen/alarm_type_math_shake_icon"
+                    android:tint="@color/colorIcAlarm"
+                    app:srcCompat="@drawable/ic_smart_phone" />
+
+                <TextView
+                    android:id="@+id/text_count_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/alarm_text_count_margin_top"
+                    android:textColor="@color/alarm_detail_list_item_text_color"
+                    android:textSize="@dimen/alarm_count_text_size"
+                    android:tint="@color/colorIcAlarm"
+                    app:srcCompat="@drawable/ic_smart_phone" />
+
+            </LinearLayout>
+
+            <NumberPicker
+                android:id="@+id/number_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/alarm_padding_horizontal_common"
+                android:layout_marginTop="@dimen/alarm_number_picker_margin_top"
+                android:descendantFocusability="blocksDescendants"
+                android:theme="@style/DefaultNumberPickerTheme" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/alarm_padding_vertical_common"
+            android:layout_marginEnd="@dimen/alarm_padding_horizontal_common"
+            android:layout_marginStart="@dimen/alarm_padding_horizontal_common"
+            android:layout_marginTop="@dimen/alarm_padding_vertical_common"
+            android:background="@drawable/alarm_type_layout_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/alarm_math_shake_text_margin_top"
+                android:gravity="center_horizontal"
+                android:text="@string/alarm_shake_difficulty"
+                android:textColor="@color/alarm_detail_list_item_text_color"
+                android:textSize="@dimen/alarm_type_math_shake_text_size" />
+
+            <include layout="@layout/seekbar_layout" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/alarm_padding_horizontal_common"
+    android:layout_marginBottom="@dimen/alarm_padding_vertical_common"
+    android:paddingEnd="@dimen/alarm_padding_horizontal_common">
+
+    <TextView
+        android:id="@+id/floatingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/seekbar_text_selected_color"
+        android:textSize="@dimen/dialog_seek_text_size"
+        android:visibility="invisible" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:layout_below="@id/floatingTv"
+        android:paddingEnd="@dimen/alarm_padding_horizontal_common"
+        android:paddingStart="@dimen/alarm_padding_horizontal_common"
+        android:layout_marginTop="@dimen/alarm_padding_vertical_common"
+        android:theme="@style/SeekBarTheme" />
+
+    <RelativeLayout
+        android:id="@+id/guild_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar"
+        android:minHeight="@dimen/dialog_seek_text_container_height">
+
+        <TextView
+            android:id="@+id/startTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/seekbar_text_color"
+            android:textSize="@dimen/dialog_seek_text_size" />
+
+        <TextView
+            android:id="@+id/endTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/seekbar_text_color"
+            android:textSize="@dimen/dialog_seek_text_size" />
+    </RelativeLayout>
+</RelativeLayout>

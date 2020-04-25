@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ln_take_a_photo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/method_dialog_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/alarm_method_take_photo_padding_vertical"
+    android:paddingTop="@dimen/alarm_method_take_photo_padding_vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/text_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/alarm_padding_horizontal_common"
+        android:layout_marginStart="@dimen/alarm_padding_horizontal_common"
+        android:text="@string/take_pho_similar" />
+
+    <ImageView
+        android:id="@+id/alarm_image"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/alarm_method_take_photo_dismiss_btn_margin_horizontal"
+        android:layout_marginStart="@dimen/alarm_method_take_photo_dismiss_btn_margin_horizontal"
+        android:layout_marginTop="@dimen/alarm_method_take_photo_dismiss_btn_margin_top">
+
+        <TextView
+            android:id="@+id/dismiss_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/alarm_method_take_photo_dismiss_btn_padding_vertical"
+            android:paddingEnd="@dimen/alarm_method_take_photo_dismiss_btn_padding_horizontal"
+            android:paddingStart="@dimen/alarm_method_take_photo_dismiss_btn_padding_horizontal"
+            android:paddingTop="@dimen/alarm_method_take_photo_dismiss_btn_padding_vertical"
+            android:text="@string/dismiss"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPurple"
+            android:textSize="@dimen/alarm_hun_button_text_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

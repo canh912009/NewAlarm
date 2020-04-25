@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/backgound"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:minHeight="@dimen/alarm_item_layout_min_height">
+
+    <ImageView
+        android:id="@+id/img_type_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/alarm_padding_horizontal_common"
+        app:srcCompat="@drawable/ic_alarm" />
+
+    <LinearLayout
+        android:id="@+id/close_active_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/alarm_padding_horizontal_common"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame_close"
+            android:layout_width="@dimen/list_fragment_close_button"
+            android:layout_height="@dimen/list_fragment_close_button"
+            android:layout_gravity="center"
+            android:background="@drawable/ripple_circle"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="@dimen/alarm_item_icon_remove_size"
+                android:layout_height="@dimen/alarm_item_icon_remove_size"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_close" />
+        </FrameLayout>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alarm_icon_active_alarm_margin_top"
+            android:checked="false"
+            android:theme="@style/SCBSwitch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/alarm_item_content_margin_start"
+        android:layout_toEndOf="@+id/img_type_repeat"
+        android:layout_toStartOf="@id/close_active_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ColorTextSetTimeDisAble" />
+
+        <TextView
+            android:id="@+id/set_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/alarm_item_time_text_size" />
+
+        <TextView
+            android:id="@+id/repeat_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ColorTextSetTimeDisAble" />
+    </LinearLayout>
+
+</RelativeLayout>

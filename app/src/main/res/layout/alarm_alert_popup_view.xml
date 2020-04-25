@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:paddingTop="@dimen/alarm_hun_layout_padding_top"
+    android:background="@drawable/hun_alert_bg"
+    android:elevation="@dimen/alarm_hun_layout_elevation">
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/alarm_hun_alert_view_margin_start"
+            android:layout_marginStart="@dimen/alarm_hun_alert_view_margin_start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alarm_name_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/alarm_hun_layout_alert_name_text_margin_top"
+                android:layout_marginBottom="@dimen/alarm_hun_layout_alert_name_text_margin_top"
+                android:fontFamily="sans-serif"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="normal"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/alarm_name_popup_text_size"/>
+
+            <include
+                layout="@layout/alarm_currenttime_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/alarm_current_time_popup_margin_top"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alarm_hun_button_layout_height"
+            android:layout_marginTop="@dimen/alarm_hun_button_margin_top"
+            android:gravity="end|center_vertical"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/popup_dismissBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alarm_hun_button_layout_height"
+                android:layout_marginEnd="@dimen/alarm_hun_layout_first_button_margin_end"
+                android:focusable="false"
+                android:background="@drawable/hun_alert_btn_bg"
+                android:gravity="center_horizontal"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/textview_dismissBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/alarm_hun_button_layout_height"
+                    android:paddingEnd="@dimen/alarm_popup_dismissBtn_paddingEnd_size"
+                    android:paddingStart="@dimen/alarm_popup_dismiss_btn_padding_start"
+                    android:fontFamily="sec-roboto-condensed"
+                    android:includeFontPadding="false"
+                    android:text="@string/dismiss"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/alarm_hun_button_text_size"
+                    android:textStyle="bold"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/popup_snoozeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alarm_hun_button_layout_height"
+                android:layout_marginEnd="@dimen/alarm_hun_layout_second_button_margin_end"
+                android:focusable="false"
+                android:background="@drawable/hun_alert_btn_bg"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/textview_snoozeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/alarm_hun_button_layout_height"
+                    android:paddingEnd="@dimen/alarm_popup_dismissBtn_paddingEnd_size"
+                    android:paddingStart="@dimen/alarm_popup_dismiss_btn_padding_start"
+                    android:fontFamily="sec-roboto-condensed"
+                    android:includeFontPadding="false"
+                    android:text="@string/snooze"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/alarm_hun_button_text_size"
+                    android:textStyle="bold"
+                    android:focusable="false"
+                    android:clickable="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_common"
+    android:orientation="vertical"
+    tools:context=".ui.detail.type.AlarmTypeActivity">
+
+    <LinearLayout
+        style="@style/AlarmTypeLayoutParentStyle"
+        android:layout_marginTop="60dp">
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+        <RelativeLayout
+            android:id="@+id/alarm_layout"
+            style="@style/AlarmTypeLayoutChildStyle"
+            android:clickable="false">
+
+            <ImageView
+                android:id="@+id/img_alarm"
+                style="@style/AlarmTypeIconStyle"
+                app:srcCompat="@drawable/ic_alarm"
+                android:tint="@color/colorIcAlarm" />
+
+            <TextView
+                style="@style/AlarmTypeTextStyle"
+                android:layout_below="@id/img_alarm"
+                android:text="@string/alarm_type_default" />
+        </RelativeLayout>
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+        <RelativeLayout
+            android:id="@+id/take_photo_layout"
+            style="@style/AlarmTypeLayoutChildStyle">
+
+            <ImageView
+                android:id="@+id/img_take_photo"
+                style="@style/AlarmTypeIconStyle"
+                app:srcCompat="@drawable/ic_photo_camera"
+                android:tint="@color/colorIcCamera" />
+
+            <TextView
+                style="@style/AlarmTypeTextStyle"
+                android:layout_below="@id/img_take_photo"
+                android:text="@string/alarm_type_take_photo" />
+        </RelativeLayout>
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/AlarmTypeLayoutParentStyle">
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+        <RelativeLayout
+            android:id="@+id/shake_phone_layout"
+            style="@style/AlarmTypeLayoutChildStyle">
+
+            <ImageView
+                android:id="@+id/img_shake_phone"
+                style="@style/AlarmTypeIconStyle"
+                app:srcCompat="@drawable/ic_smart_phone"
+                android:tint="@color/colorIcShakePhone" />
+
+            <TextView
+                style="@style/AlarmTypeTextStyle"
+                android:layout_below="@id/img_shake_phone"
+                android:text="@string/alarm_type_shake_phone" />
+        </RelativeLayout>
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+        <RelativeLayout
+            android:id="@+id/math_pro_layout"
+            style="@style/AlarmTypeLayoutChildStyle">
+
+            <ImageView
+                android:id="@+id/img_math_pro"
+                style="@style/AlarmTypeIconStyle"
+                app:srcCompat="@drawable/ic_calculator"
+                android:tint="@color/colorIcCalculator" />
+
+            <TextView
+                style="@style/AlarmTypeTextStyle"
+                android:layout_below="@id/img_math_pro"
+                android:text="@string/alarm_type_math_problems" />
+        </RelativeLayout>
+
+        <Space style="@style/AlarmTypeSpaceLayout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

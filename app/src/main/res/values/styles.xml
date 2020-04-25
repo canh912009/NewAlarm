@@ -1,0 +1,179 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeStyle">@style/ActionMode</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionModeNoCloseButton</item>
+        <item name="android:overlapAnchor">true</item>
+    </style>
+
+    <style name="AlertActivityTheme">
+        <item name="android:theme">@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar
+        </item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionMode">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="ActionModeNoCloseButton" parent="@android:style/Widget.ActionButton.CloseMode">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="AlarmDetailListItemLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/alarm_detail_padding_vertical_common</item>
+        <item name="android:paddingTop">@dimen/alarm_detail_padding_vertical_common</item>
+        <item name="android:paddingStart">@dimen/alarm_padding_horizontal_common</item>
+        <item name="android:paddingEnd">@dimen/alarm_padding_horizontal_common</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/alarm_detail_list_item_layout_min_height</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="AlarmDetailListItemText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/alarm_detail_list_item_text_size</item>
+        <item name="android:textColor">@color/alarm_detail_list_item_text_color</item>
+    </style>
+
+    <style name="AlarmDetailIconMore">
+        <item name="android:layout_width">@dimen/alarm_detail_ic_more_size</item>
+        <item name="android:layout_height">@dimen/alarm_detail_ic_more_size</item>
+        <item name="android:layout_marginEnd">@dimen/alarm_detail_ic_more_margin_common</item>
+        <item name="android:layout_marginStart">@dimen/alarm_detail_ic_more_margin_common</item>
+        <item name="android:src">@drawable/ic_more</item>
+        <item name="android:tint">@color/colorIconMore</item>
+    </style>
+
+    <style name="AlarmDetailListItemTextValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/alarm_detail_list_item_text_size</item>
+        <item name="android:textColor">@color/alarm_detail_list_item_text_secondary_color</item>
+        <item name="android:layout_marginEnd">@dimen/alarm_detail_ic_more_margin_common</item>
+        <item name="android:layout_marginStart">@dimen/alarm_detail_ic_more_margin_common</item>
+    </style>
+
+    <style name="AlarmTypeLayoutParentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">@dimen/alarm_type_layout_parent_vertical_padding</item>
+        <item name="android:paddingTop">@dimen/alarm_type_layout_parent_vertical_padding</item>
+    </style>
+
+    <style name="AlarmTypeLayoutChildStyle">
+        <item name="android:layout_width">@dimen/alarm_type_child_width_height</item>
+        <item name="android:layout_height">@dimen/alarm_type_child_width_height</item>
+        <item name="android:background">@drawable/alarm_type_layout_bg</item>
+    </style>
+
+    <style name="AlarmTypeSpaceLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AlarmTypeIconStyle">
+        <item name="android:layout_width">@dimen/alarm_type_icon_size</item>
+        <item name="android:layout_height">@dimen/alarm_type_icon_size</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="AlarmTypeTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">@dimen/alarm_type_text_margin_top</item>
+        <item name="android:textSize">@dimen/alarm_type_text_size</item>
+    </style>
+
+    <style name="DefaultNumberPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorIcAlarm</item>
+    </style>
+
+    <style name="SeekBarTheme" parent="AppTheme">
+        <item name="android:colorControlActivated">@color/colorIcAlarm</item>
+        <item name="android:colorControlNormal">@color/colorGray</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorIcAlarm</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/alarm_color_foreground_sw</item>
+    </style>
+
+    <style name="DefaultMethodText">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorIcAlarm</item>
+        <item name="android:textSize">@dimen/alarm_method_text_size</item>
+        <item name="android:background">@drawable/ripple_effect</item>
+    </style>
+
+    <style name="TimePickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorIcAlarm</item>
+    </style>
+
+    <style name="ThemeDialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorControlNormal">@color/colorIcAlarm</item>
+        <item name="android:textColor">@color/colorIcAlarm</item>
+    </style>
+
+    <style name="ThemeEditText" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorIcAlarm</item>
+        <item name="android:textColor">@color/colorIcAlarm</item>
+        <item name="colorAccent">@color/colorIcAlarm</item>
+    </style>
+
+    <style name="ThemeRadioButton" parent="AppTheme">
+        <item name="colorControlNormal">@color/colorIcAlarm</item>
+        <item name="colorControlActivated">@color/colorIcAlarm</item>
+    </style>
+
+    <style name="RowCalculatorLayoutStyle">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:weightSum">3</item>
+    </style>
+
+    <style name="ButtonNumCalculatorLayoutStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ripple</item>
+        <item name="android:textSize">@dimen/alarm_calculator_button_text_size</item>
+    </style>
+
+    <style name="TabTextAppearanceStyle" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/alarm_title_tab_text_size</item>
+    </style>
+
+</resources>

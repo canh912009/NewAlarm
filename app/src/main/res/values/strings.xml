@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">NewAlarm</string>
+    <string name="alarm_off_method">Alarm off method</string>
+    <string name="alarm_type_default">Default</string>
+    <string name="alarm_type_take_photo">Take a photo</string>
+    <string name="alarm_type_shake_phone">Shake phone</string>
+    <string name="alarm_type_math_problems">Math problems</string>
+    <string name="alarm_text_repeat">Repeat</string>
+    <string name="alarm_text_alarm_tone">Alarm tone</string>
+    <string name="alarm_text_alarm_tone_title">Alarm Tone</string>
+    <string name="alarm_snooze">Snooze</string>
+    <string name="alarm_name">Name</string>
+    <string name="alarm_tittle_alarm_detail">Alarm Detail</string>
+    <string name="alarm_tittle_alarm_create">Create Alarm</string>
+    <string name="alarm_tittle_alarm_alert">Alarm Alert</string>
+    <string name="alarm_tittle_take_photo">Take a photo</string>
+    <string name="alarm_tittle_alarm">Alarms</string>
+    <string name="alarm_tittle_calendar">Calendar</string>
+    <string name="alarm_tittle_repeat">Repeat</string>
+    <string name="alarm_tittle_shake_phone">Shake Phone</string>
+    <string name="alarm_tittle_math_pro">Math problems</string>
+
+    <string name="alarm_mon_full">Monday</string>
+    <string name="alarm_tue_full">Tuesday</string>
+    <string name="alarm_wed_full">Wednesday</string>
+    <string name="alarm_thu_full">Thursday</string>
+    <string name="alarm_fri_full">Friday</string>
+    <string name="alarm_sat_full">Saturday</string>
+    <string name="alarm_sun_full">Sunday</string>
+
+    <string name="alarm_mon">Mon</string>
+    <string name="alarm_tue">Tue</string>
+    <string name="alarm_wed">Wed</string>
+    <string name="alarm_thu">Thu</string>
+    <string name="alarm_fri">Fri</string>
+    <string name="alarm_sat">Sat</string>
+    <string name="alarm_sun">Sun</string>
+
+    <string-array name="alarm_repeat">
+        <item>@string/alarm_mon_full</item>
+        <item>@string/alarm_tue_full</item>
+        <item>@string/alarm_wed_full</item>
+        <item>@string/alarm_thu_full</item>
+        <item>@string/alarm_fri_full</item>
+        <item>@string/alarm_sat_full</item>
+        <item>@string/alarm_sun_full</item>
+    </string-array>
+
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="change_nick_name">Change</string>
+    <string name="repeat_none">None</string>
+    <string name="alarm_snooze_time">%d mins</string>
+    <string name="alarm_snooze_time_off">Off</string>
+    <string name="alarm_tittle_dialog_set_name">Set name alarm</string>
+    <string name="alarm_repeat_every_day">Everyday</string>
+    <string name="alarm_shake_count_time">Shake %d times</string>
+    <string name="alarm_num_of_math_pro">%d problems</string>
+    <string name="alarm_level_easy">Easy</string>
+    <string name="alarm_level_normal">Normal</string>
+    <string name="alarm_level_hard">Hard</string>
+    <string name="alarm_level_demo_math_easy">3+8=?</string>
+    <string name="alarm_level_demo_math_normal">3+7+9=?</string>
+    <string name="alarm_level_demo_math_difficult">(7x6)+5=?</string>
+    <string name="alarm_shake_difficulty">Shake difficulty</string>
+    <string name="alarm_text_no_photo">There is no photo\nPlease take a new photo to dismiss alarm</string>
+    <string name="alarm_text_no_alarm">There is no alarm created\nPlease click \"+\" button to create new alarm</string>
+    <string name="alarm_text_no_music">There\'s no song to select</string>
+    <string name="new_alarm_is_not_created">New Alarm is not created</string>
+    <string name="name_alarm_hint">Name alarm</string>
+
+    <!-- Text to display in the small text of the notification -->
+    <string name="alarm_notify_text">Snooze or dismiss alarm.</string>
+    <string name="dismiss" >Dismiss</string>
+    <string name="alarm">Alarm</string>
+    <string name="snooze">Snooze</string>
+    <string name="button">Button</string>
+
+    <string name="alarm_alert_time_hour_digit_two">%1$02d:%2$02d</string>
+    <string name="alarm_alert_time_hour_digit_one">%1$d:%2$02d</string>
+
+    <string name="ring_ton">Ringtones</string>
+    <string name="song">Songs</string>
+    <string name="take_pho_similar">Please click image and take a photo similar image is set alarm</string>
+    <string name="take_pho_get_fail">Seem image set alarm is deleted. Click dismiss to cancel alarm</string>
+    <string name="shake_times">Shake %d times</string>
+    <string name="num_seven">7</string>
+    <string name="num_eight">8</string>
+    <string name="num_nine">9</string>
+    <string name="num_four">4</string>
+    <string name="num_five">5</string>
+    <string name="num_six">6</string>
+    <string name="num_one">1</string>
+    <string name="num_two">2</string>
+    <string name="num_three">3</string>
+    <string name="num_zero">0</string>
+    <string name="time_am">AM</string>
+    <string name="time_pm">PM</string>
+
+</resources>

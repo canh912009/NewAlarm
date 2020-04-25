@@ -1,0 +1,5 @@
+<paths>
+    <external-path
+        name="alarm_add_image"
+        path="Android/data/app.alarm/files/Pictures" />
+</paths>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SeekBarTheme" parent="AppTheme">
+        <item name="android:colorControlActivated">@color/colorIcAlarm</item>
+        <item name="android:colorControlNormal">@color/colorGray</item>
+    </style>
+</resources>

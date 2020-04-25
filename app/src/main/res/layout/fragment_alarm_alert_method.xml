@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/alarm_layout_time_min_height"
+        android:layout_gravity="center"
+        android:background="@color/method_dialog_header">
+
+        <TextView
+            android:id="@+id/alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/alarm_time_text_size" />
+
+        <TextView
+            android:id="@+id/alarm_time_apm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/alarm_time"
+            android:layout_marginEnd="@dimen/alarm_alarm_time_apm_margin"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/alarm_am_pm_text_size" />
+    </RelativeLayout>
+
+    <include layout="@layout/method_default" />
+
+    <include layout="@layout/method_shake" />
+
+    <include layout="@layout/method_calculator" />
+
+    <include layout="@layout/method_take_a_photo" />
+
+</LinearLayout>
