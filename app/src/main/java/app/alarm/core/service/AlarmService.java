@@ -1,6 +1,7 @@
 package app.alarm.core.service;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -8,10 +9,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -46,6 +51,34 @@ public class AlarmService extends Service {
     }
 
     @Override
+    public void onCreate() {
+        super.onCreate();
+
+        // https://stackoverflow.com/questions/44425584/context-startforegroundservice-did-not-then-call-service-startforeground
+        notificationPopupServiceAlarm();
+    }
+
+    public static final String CHANNEL_ID = "NewAlarmServiceChannel";
+    private void notificationPopupServiceAlarm() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel serviceChannel = new NotificationChannel(
+                    CHANNEL_ID,
+                    "NewAlarm Service Channel",
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(serviceChannel);
+
+            Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setContentTitle("")
+                    .setContentText("").build();
+
+            startForeground(0, notification);
+        }
+    }
+
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(Utils.SET_ON_TIME_PERFORMANCE, "onStartCommand: intent = " + intent);
         if (intent == null) {
@@ -63,7 +96,7 @@ public class AlarmService extends Service {
         } else if (!(Utils.getTopActivity(mContext).equals(".ui.alarm.AlarmAlertActivity"))) {
             Log.d(Utils.SET_ON_TIME_PERFORMANCE, "onStartCommand not call callAlarmAlertActivity");
             Intent alert = new Intent();
-            alert.setClass(mContext,PopupService.class);
+            alert.setClass(mContext, PopupService.class);
             alert.putExtra(Alarm.ALARM_DATA, intent.getByteArrayExtra(Alarm.ALARM_DATA));
             mContext.startService(alert);
             /*showNotificationReminder(mContext);*/

@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".core.app.NewAlarmApplication"
@@ -74,7 +75,6 @@
             android:directBootAware="true"
             android:permission="com.android.alarm.permission.SET_ALARM">
             <intent-filter android:priority="100">
-
                 <!-- to show the alarm alert(full screen/popup). we receive it form Alarm Manager -->
                 <action android:name="app.alarm.core.receiver.ALARM_ALERT" />
             </intent-filter>

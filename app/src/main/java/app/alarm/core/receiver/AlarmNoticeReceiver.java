@@ -3,8 +3,11 @@ package app.alarm.core.receiver;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
+
+import androidx.core.content.ContextCompat;
 
 import app.alarm.core.data.db.entities.Alarm;
 import app.alarm.core.service.AlarmService;
@@ -34,6 +37,7 @@ public class AlarmNoticeReceiver extends BroadcastReceiver {
 
         switch (action) {
             case Alarm.ALARM_ALERT:
+                Log.d("CANHCANH", "onReceive: ");
                 receiveAlarmAlertIntent(context, intent);
                 break;
 
@@ -52,7 +56,6 @@ public class AlarmNoticeReceiver extends BroadcastReceiver {
         if (notificationType == Alarm.ALERT_TYPE_ALERT) {
             if (StateUtil.isInCall(context)) {
                 showNotification(context, item);
-
                 waitForCallEnd(context, intent, PENDING_ALARM);
             } else {
                 startAlarmService(context, intent);
@@ -77,14 +80,13 @@ public class AlarmNoticeReceiver extends BroadcastReceiver {
         return Alarm.ALERT_TYPE_ALERT;
     }
 
-    public  void startAlarmService(Context context, Intent intent) {
+    public void startAlarmService(Context context, Intent intent) {
         Log.d(Utils.SET_ON_TIME_PERFORMANCE, "->startAlarmService");
 
         Intent alert = new Intent();
         alert.setClass(context, AlarmService.class);
         alert.putExtra(Alarm.ALARM_DATA, intent.getByteArrayExtra(Alarm.ALARM_DATA));
         context.startService(alert);
-
         Log.d(Utils.SET_ON_TIME_PERFORMANCE, "<-startAlarmService");
     }
 }

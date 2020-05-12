@@ -60,12 +60,13 @@ public class AlarmHelper {
             out.setDataPosition(0);
             intent.putExtra(Alarm.ALARM_DATA, out.marshall());
             intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND | Intent.FLAG_RECEIVER_NO_ABORT);
+            intent.setClass(context, AlarmNoticeReceiver.class);
             mPendingIntent = PendingIntent.getBroadcast(context, 0, intent,
                     PendingIntent.FLAG_CANCEL_CURRENT);
 
             AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-
             am.setExact(AlarmManager.RTC_WAKEUP, item.getAlarmDate(), mPendingIntent);
+
             setStatusBarIcon(context, item, intent);
         } else {
             setStatusBarIcon(context, null, null);

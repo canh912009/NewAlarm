@@ -1,0 +1,3 @@
+- chỗ Hiển thị Service
+- Receiver ko chạy khi tắt app -> ko gọi dc Service
+- thay coroutines kotlin cho Rx
