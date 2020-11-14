@@ -1,8 +1,8 @@
 package app.alarm.ui.detail.tone;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 public class AlarmTonePagerAdapter extends FragmentPagerAdapter {
     private int mNumOfTabs;

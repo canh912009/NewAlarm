@@ -3,7 +3,7 @@ package app.alarm.ui.detail.type;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.SeekBar;

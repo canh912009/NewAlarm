@@ -1,7 +1,7 @@
 package app.alarm.ui.detail;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.FragmentTransaction;
 
 import app.alarm.R;
 import app.alarm.core.presentation.BaseActivity;
