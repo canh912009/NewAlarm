@@ -14,18 +14,26 @@ class AlarmViewModelKt(application: Application) : AndroidViewModel(application)
     private val mAlarmDao: AlarmDao = AppDatabase.getInstance(application).alarmDao()
 
     fun deleteAlarm(alarm: Alarm?): Flow<Int> {
-        return flow { emit(mAlarmDao.deleteAlarm(alarm)) }
+        return flow {
+            emit(mAlarmDao.deleteAlarm(alarm))
+        }
     }
 
     fun deleteAlarmWithId(id: Int): Flow<Int> {
-        return flow { emit(mAlarmDao.deleteAlarmById(id)) }
+        return flow {
+            emit(mAlarmDao.deleteAlarmById(id))
+        }
     }
 
     fun updateAlarmByActive(id: Long, active: Int): Flow<Int> {
-        return flow { emit(mAlarmDao.updateAlarmByActive(id, active)) }
+        return flow {
+            emit(mAlarmDao.updateAlarmByActive(id, active))
+        }
     }
 
-    fun getListAlarms() : Flow<List<Alarm>> {
-        return flow { emit(mAlarmDao.allAlarm) }
+    fun getListAlarms(): Flow<List<Alarm>> {
+        return flow {
+            emit(mAlarmDao.allAlarm)
+        }
     }
 }
