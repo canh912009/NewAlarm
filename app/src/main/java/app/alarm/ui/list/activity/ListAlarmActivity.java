@@ -55,7 +55,7 @@ public class ListAlarmActivity extends BaseActivity {
 
     private void initializeView() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.alarm_list_container, ListAlarmFragment.newInstance()).commit();
+        fragmentTransaction.replace(R.id.alarm_list_container, ListAlarmFragmentKt.Companion.newInstance()).commit();
     }
 
 }
